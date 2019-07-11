@@ -1,0 +1,14 @@
+#!/bin/bash
+
+set -e
+
+if [ -n "$DEBBASE_NO_STARTUP_APT" ]; then
+    echo "Running apt daily job at container start..."
+    /usr/lib/apt/apt.systemd.daily
+    echo "apt daily job complete; proceeding with container initialization."
+fi
+
+# /usr/lib/apt/apt.systemd.daily is called from /etc/cron.daily/apt-compat.
+# /lib/systemd/system/apt-daily{,-upgrade}.{service,timer} also call it,
+# with arguments to do things in two separate phases.  With no args,
+# it does everything at once.
