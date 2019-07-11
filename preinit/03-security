@@ -2,7 +2,7 @@
 
 set -e
 
-if [ -n "$DEBBASE_NO_STARTUP_APT" ]; then
+if [ -z "$DEBBASE_NO_STARTUP_APT" ]; then
     echo "Running apt daily job at container start..."
     /usr/lib/apt/apt.systemd.daily
     echo "apt daily job complete; proceeding with container initialization."
