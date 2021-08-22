@@ -1,4 +1,4 @@
-FROM jgoerzen/debian-base-standard:buster
+FROM jgoerzen/debian-base-standard:bullseye
 MAINTAINER John Goerzen <jgoerzen@complete.org>
 
 COPY setup/ /usr/local/debian-base-setup/
