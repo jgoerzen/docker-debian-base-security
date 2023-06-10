@@ -1,4 +1,4 @@
-FROM jgoerzen/debian-base-standard:bullseye
+FROM jgoerzen/debian-base-standard:bookworm
 MAINTAINER John Goerzen <jgoerzen@complete.org>
 
 COPY setup/ /usr/local/debian-base-setup/
