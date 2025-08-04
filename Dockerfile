@@ -1,5 +1,5 @@
 FROM jgoerzen/debian-base-standard:trixie
-MAINTAINER John Goerzen <jgoerzen@complete.org>
+LABEL org.opencontainers.image.authors="John Goerzen <jgoerzen@complete.org>"
 
 COPY setup/ /usr/local/debian-base-setup/
 COPY preinit /usr/local/preinit
